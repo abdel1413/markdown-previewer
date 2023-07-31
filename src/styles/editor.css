@@ -1,0 +1,42 @@
+.editor-preview {
+  max-width: 600px;
+  margin: 1.25rem auto;
+  overflow: break-word;
+  min-height: 200px;
+  border: 1px solid black;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  background-color: #c0d8d8;
+  box-shadow: 1px 1px 10px 2px #3a5f5f;
+}
+
+#editor {
+  width: 100%;
+  min-height: 200px;
+  background-color: #c0d8d8;
+}
+#editor-toolbar {
+  background-color: #4ba3a3;
+  display: flex;
+  align-items: center;
+  padding: 0.1rem;
+  border: 1px solid black;
+  box-shadow: 1px 1px 10px 2px #3a5f5f;
+}
+
+#editor-toolbar #editor-fafreecode {
+  font-size: 1.2rem;
+  margin: 5px;
+  text-decoration: underline;
+}
+
+#editor-toolbar #editor-arrow {
+  font-size: 1.2rem;
+  margin-left: 490px;
+  float: right;
+  cursor: pointer;
+}
+
+#editor-toolbar #editor-arrow:hover {
+  color: #6de2b1;
+}

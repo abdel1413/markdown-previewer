@@ -1,0 +1,133 @@
+.preview-wrapper {
+  max-width: 800px;
+  margin: 1.25rem auto;
+  overflow: break-word;
+  min-height: 200px;
+  border: 1px solid black;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  background-color: #c0d8d8;
+  box-shadow: 1px 1px 10px 2px #3a5f5f;
+}
+
+.preview {
+  padding: 0 1rem;
+  margin: 0;
+  background-color: #c0d8d8;
+}
+.preview h1 {
+  border-bottom: 2px solid black;
+}
+.preview h2 {
+  border-bottom: 1px solid black;
+}
+
+#toolbar {
+  background-color: #4ba3a3;
+  display: flex;
+  align-items: center;
+  padding: 0.1rem;
+  border: 1px solid black;
+  box-shadow: 1px 1px 10px 2px #3a5f5f;
+}
+
+#toolbar .arrow {
+  float: right;
+  margin-left: 670px;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+#toolbar .arrow:hover {
+  color: #6de2b1;
+}
+
+#toolbar #fafreecode {
+  font-size: 1.5rem;
+  margin: 5px;
+  text-decoration: underline;
+}
+
+blockquote {
+  height: 2rem;
+}
+blockquote p {
+  border-left: 4px solid green;
+  padding: 0 5px;
+  font-size: 1.2rem;
+  color: #547c7b;
+}
+
+p code {
+  background-color: #fff;
+  padding: 0.2rem;
+  margin: 0 2px;
+}
+pre code {
+  background-color: #fff;
+  overflow: auto;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5;
+  display: block;
+  flex-direction: column;
+}
+code .comment {
+  color: #708090;
+  margin-bottom: 1rem;
+}
+code .function {
+  color: #dd4a68;
+}
+code .keyword {
+  color: #07a;
+  font-weight: bold;
+}
+
+code .if,
+code .close {
+  margin-left: 2rem;
+}
+code .return {
+  margin-left: 3rem;
+}
+code .close-end {
+  margin-left: 1.5rem;
+}
+
+table {
+  display: table;
+  border-color: gray;
+  border-spacing: 2px;
+  border-collapse: collapse;
+}
+
+th {
+  display: table-cell;
+  border: 2px solid black;
+  padding: 0 5px;
+  font-size: 1rem;
+  height: 2rem;
+}
+table tbody td {
+  display: table-cell;
+  border: 2px solid black;
+  padding: 0 5px;
+  font-size: 1rem;
+  height: 2rem;
+}
+
+p {
+  font-size: 15px;
+  margin: 0.5rem;
+}
+p > img {
+  font-size: 15px;
+
+  margin: auto;
+  font-weight: 0;
+  width: 100%;
+  height: 100px;
+
+  letter-spacing: 3px;
+}

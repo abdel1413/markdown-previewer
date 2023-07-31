@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #87b5b5;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.App {
+  /* text-align: center; */
+}
