@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import "./App.css";
 import { Editor } from "./Components/Editor";
 import { Preview } from "./Components/Preview";

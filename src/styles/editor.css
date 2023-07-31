@@ -30,13 +30,31 @@
   text-decoration: underline;
 }
 
-#editor-toolbar #editor-arrow {
+#editor-toolbar .editor-arrow {
   font-size: 1.2rem;
   margin-left: 490px;
   float: right;
   cursor: pointer;
 }
 
-#editor-toolbar #editor-arrow:hover {
+#editor-toolbar .editor-arrow:hover {
   color: #6de2b1;
+}
+
+.compressor {
+  font-size: 1.2rem;
+  margin-left: 480px;
+  float: right;
+  cursor: pointer;
+}
+
+.compressor:hover {
+  color: #6de2b1;
+}
+
+.maximized {
+  min-height: 100vh;
+  margin: auto;
+  max-width: 600px;
+  height: 100%;
 }
