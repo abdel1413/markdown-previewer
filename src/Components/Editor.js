@@ -1,10 +1,9 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { FaArrowsAlt, FaCompressAlt, FaFreeCodeCamp } from "react-icons/fa";
 
 import "../styles/editor.css";
 
-export function Editor(props) {
-  let [text, setText] = useState("");
+export function Editor({ editText, handleTextearea }) {
   let [visibility, setVisibility] = useState("hidden");
   let [compress, setCompress] = useState("block");
   let [isOpen, setIsOpen] = useState(true);
@@ -12,36 +11,33 @@ export function Editor(props) {
   const handleClick = () => {
     let compressClass = document.getElementsByClassName("compressor_")[0];
     let comp = document.getElementsByClassName("editor-arrow")[0];
-    let previewEd = document.getElementsByClassName("editor-preview")[0];
+
+    let textarea = document.getElementsByClassName("editor")[0];
 
     if (isOpen) {
       setVisibility("block");
       setCompress("hidden");
 
-      console.log("com", comp.classList);
-      console.log("compresc", compressClass.classList);
-      //comp.className.baseVal = "";
-      comp.classList.remove();
-      //compressClass.className.baseVal = "compressor";
-      compressClass.classList.toggle("compressor");
-      previewEd.classList.toggle("maximized");
-      console.log(previewEd.classList);
-      console.log(compressClass.classList);
-
+      comp.className.baseVal = "";
+      compressClass.className.baseVal = " compressor_ compressor";
+      textarea.style.height = "100vh";
       setIsOpen(false);
     } else {
       setVisibility("hidden");
       setCompress("block");
-      //previewEd.className = "editor-preview";
-
       comp.className.baseVal = "editor-arrow";
-      // compressClass.className.baseVal = "";
-      comp.classList.toggle("editor-arrow");
-      compressClass.classList.remove();
-      console.log(previewEd.classList);
+      compressClass.className.baseVal = "";
+      textarea.style.height = "initial";
       setIsOpen(true);
     }
   };
+
+  // const handleChange = (e) => {
+  //   setText(e.target.value);
+  //   editText = e.target.value;
+  //   console.log("edit", editText);
+  // };
+
   return (
     <div className="editor-wrapper">
       <div className="editor-preview">
@@ -59,7 +55,13 @@ export function Editor(props) {
             visibility={visibility}
           />
         </div>
-        <textarea type="text" id="editor" className="editor"></textarea>
+        <textarea
+          type="text"
+          id="editor"
+          className="editor"
+          value={editText}
+          onChange={handleTextearea}
+        ></textarea>
       </div>
     </div>
   );

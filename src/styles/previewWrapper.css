@@ -131,3 +131,11 @@ p > img {
 
   letter-spacing: 3px;
 }
+
+.maximized {
+  min-height: 100vh;
+  margin: auto;
+  max-width: 800px;
+  /* height: 100%; */
+  margin: 0 auto;
+}
