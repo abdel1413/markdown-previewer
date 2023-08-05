@@ -48,9 +48,6 @@
   text-decoration: underline;
 }
 
-blockquote {
-  height: 2rem;
-}
 blockquote p {
   border-left: 4px solid green;
   padding: 0 5px;
@@ -123,19 +120,30 @@ p {
 }
 p > img {
   font-size: 15px;
-
   margin: auto;
   font-weight: 0;
   width: 100%;
   height: 100px;
-
   letter-spacing: 3px;
 }
 
-.maximized {
-  min-height: 100vh;
-  margin: auto;
+.max {
+  position: absolute;
+  top: 0;
+  left: 18rem;
   max-width: 800px;
-  /* height: 100%; */
   margin: 0 auto;
+  overflow: break-word;
+  min-height: 100%;
+  /* max-height: 100%; */
+  z-index: 2;
+}
+
+.compress {
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.compress:hover {
+  color: #6de2b1;
 }

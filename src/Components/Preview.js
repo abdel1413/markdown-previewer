@@ -10,17 +10,20 @@ export function Preview({ previewText }) {
 
   const handleClick = () => {
     let prev = document.getElementsByClassName("preview-wrapper")[0];
+    let compressor = document.getElementsByClassName("compressor")[0];
     if (isOpen) {
-      setIsVisible(!isVisible);
+      setIsVisible("block");
       setArrow("hidden");
 
       setIsOpen(!isOpen);
-      prev.classList.add("maximizedd");
+
+      prev.classList.add("max");
+      console.log("compress", compressor);
     } else {
       setIsVisible("hidden");
       setArrow("block");
       setIsOpen(true);
-      prev.classList.remove("maximizedd");
+      prev.classList.remove("max");
     }
   };
   return (
@@ -33,7 +36,11 @@ export function Preview({ previewText }) {
           onClick={handleClick}
           visibility={arrow}
         />
-        <FaCompressAlt visibility={isVisible} onClick={handleClick} />
+        <FaCompressAlt
+          className="compress"
+          visibility={isVisible}
+          onClick={handleClick}
+        />
       </div>
       <div
         className="preview"
